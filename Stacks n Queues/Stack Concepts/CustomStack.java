@@ -1,7 +1,6 @@
-
 class CustomStack {
 
-   private int[] data;
+   protected int[] data;
    private int ptr = -1;
    private static int DEFAULT_SIZE = 5;
 
@@ -13,18 +12,20 @@ class CustomStack {
         data = new int[size];
    }
 
-   void add(int item) throws Exception {
+   protected boolean push(int item) {
 
     if(isFull()) {
-        throw new CustomStackException("No more spaces....");
+        System.out.println("Stack is full...");
+        return false;
     }
 
     ptr++;
     data[ptr] = item;
 
+    return true;
    }
 
-   int pop() throws Exception  {
+   protected int pop() throws Exception  {
 
     if(isEmpty()) {
         throw new CustomStackException("No data to be removed");
@@ -42,11 +43,11 @@ class CustomStack {
     return data[ptr];
    }
 
-   private boolean isFull() {
+   protected boolean isFull() {
     return ptr == data.length-1;
    }
 
-   private boolean isEmpty() {
+   protected boolean isEmpty() {
     return ptr == -1;
    }
 
