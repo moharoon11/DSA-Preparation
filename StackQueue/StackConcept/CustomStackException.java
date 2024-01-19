@@ -1,4 +1,5 @@
 
+package StackQueue.StackConcept;
 
 class CustomStackException extends Exception {
 

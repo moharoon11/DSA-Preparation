@@ -1,3 +1,4 @@
+package StackQueue.StackConcept;
 
 class DynamicStack extends CustomStack {
 

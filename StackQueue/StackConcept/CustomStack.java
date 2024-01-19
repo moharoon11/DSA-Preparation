@@ -1,3 +1,5 @@
+package StackQueue.StackConcept;
+
 class CustomStack {
 
    protected int[] data;
