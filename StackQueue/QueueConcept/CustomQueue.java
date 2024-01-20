@@ -37,7 +37,7 @@ class CustomQueue {
     protected int remove() throws Exception {
 
         if(isEmpty()) {
-           throw new CustomQueueExceptino("Stack is empty");
+           throw new CustomQueueException("Stack is empty");
         }
 
 
