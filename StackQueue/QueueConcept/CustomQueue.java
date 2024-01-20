@@ -34,11 +34,10 @@ class CustomQueue {
         return end == 0;
     }
 
-    protected int remove() {
+    protected int remove() throws Exception {
 
         if(isEmpty()) {
-          System.out.println("stack is empty...");
-           return -1111111;
+           throw new CustomQueueExceptino("Stack is empty");
         }
 
 

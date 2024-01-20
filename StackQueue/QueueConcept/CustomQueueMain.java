@@ -2,7 +2,7 @@ package StackQueue.QueueConcept;
 
 public class CustomQueueMain {
 
-    public static void main(String... args) {
+    public static void main(String... args) throws Exception {
 
 
         CustomQueue queue = new CustomQueue();
