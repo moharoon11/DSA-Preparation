@@ -19,7 +19,6 @@ public class ImplementQueueUsingStacks {
         stack1.push(item);
     }
 
-
     // removal, complexity O(n)
     public int remove() {
         while(!stack1.isEmpty()) {
@@ -32,9 +31,7 @@ public class ImplementQueueUsingStacks {
             stack1.push(stack2.pop());
         }
 
-
         return removed;
-
     }
 
     public int peek() {
