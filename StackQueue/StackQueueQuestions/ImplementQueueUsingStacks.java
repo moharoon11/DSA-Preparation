@@ -1,6 +1,6 @@
 package StackQueue.StackQueueQuestions;
 
-import java.util.*;
+import java.util.Stack;
 
 // insertion efficient O(1)
 public class ImplementQueueUsingStacks {
@@ -10,8 +10,8 @@ public class ImplementQueueUsingStacks {
    
 
     ImplementQueueUsingStacks() {
-      stack1 = new Stack();
-      stack2 = new Stack();
+      stack1 = new Stack<>();
+      stack2 = new Stack<>();
     }
 
     // insertion is efficient, complexity O(1)

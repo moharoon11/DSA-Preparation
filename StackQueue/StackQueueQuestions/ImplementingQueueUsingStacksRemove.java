@@ -11,8 +11,8 @@ class ImplementingQueueUsingStacksRemove {
    
 
     ImplementingQueueUsingStacksRemove() {
-      stack1 = new Stack();
-      stack2 = new Stack();
+      stack1 = new Stack<>();
+      stack2 = new Stack<>();
     }
 
     public void insert(int item) {
