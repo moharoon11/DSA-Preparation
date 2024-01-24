@@ -1,4 +1,4 @@
-package Searching.BinarySearch.Easy;
+package Searching.BinarySearch.Easy.coding;
 
 public class Sqrtx {
 
