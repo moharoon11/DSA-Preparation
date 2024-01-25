@@ -1,10 +1,11 @@
-package Searching.BinarySearch.Easy.coding;
+package Searching.BinarySearch.Easy.Looking;
 
 public class Sqrtx {
 
     public static void main(String... args) {
 
          System.out.println(sqrt(36));
+         
          System.out.println(sqrt1(64));
     }
  

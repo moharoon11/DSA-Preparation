@@ -1,4 +1,4 @@
-package Searching.BinarySearch.Easy.coding;
+package Searching.BinarySearch.Easy.Looking;
 
 public class SearchInsertPosition {
 
