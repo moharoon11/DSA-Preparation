@@ -22,9 +22,12 @@ public class SortedMatrixRowAndColumnWise {
 
     private static int[] search(int[][] matrix, int target) {
 
-
+        // lower bound
         int r = 0;
+        // if it is NxN matrix the upper bound is
         int c = matrix.length - 1;
+        // if it is NxM matrix the upper bount is
+        /** int c = matrix[0].length - 1 */
 
         while(r < matrix.length && c >= 0) {
 
