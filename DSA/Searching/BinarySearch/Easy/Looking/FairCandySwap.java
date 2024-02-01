@@ -6,6 +6,11 @@ public class FairCandySwap {
 
     public static void main(String[] args) {
 
+        int[] aliceSizes = {};
+        int[] bobSizes = {};
+        int [] result = candySwapBinarySearch(aliceSizes, bobSizes);
+        System.out.println(result);
+
     }
 
     // brute force method
