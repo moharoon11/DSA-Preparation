@@ -9,7 +9,7 @@ public class CycleSort {
         int[] arr = {3,5,4,1,2};
 
         cycleSort(arr);
-        
+
         System.out.println(Arrays.toString(arr));
 
     }
@@ -34,6 +34,8 @@ public class CycleSort {
         arr[first] = arr[second];
         arr[second] = temp;
     }
+
+   
 
     
 }
