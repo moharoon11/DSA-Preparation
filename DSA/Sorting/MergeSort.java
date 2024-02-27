@@ -27,6 +27,9 @@ public class MergeSort {
 
     }
 
+
+
+
     private static int[] mergeSort(int[] arr) {
 
         if(arr.length == 1) {
@@ -37,22 +40,19 @@ public class MergeSort {
         int high = arr.length;
         int mid = arr.length / 2;
 
-        int left[] = mergeSort(Arrays.copyOfRange(arr, low, mid));
-        int right[] = mergeSort(Arrays.copyOfRange(arr, mid, high));
+        int[] left = mergeSort(Arrays.copyOfRange(arr, low, mid));
+        int[] right = mergeSort(Arrays.copyOfRange(arr, mid, high));
         
         return merge(left, right);
     }
 
+
     private static int[] merge(int[] left, int[] right) {
-
         int[] mergedSortedArray = new int[left.length + right.length];
-
         int li = 0;
         int ri = 0;
         int ki = 0;
-
         while(li < left.length && ri < right.length) {
-
             if(left[li] < right[li]) {
                  mergedSortedArray[ki] = left[li];
                  li++;
@@ -62,16 +62,16 @@ public class MergeSort {
             }
             ki++;
         }
-
         while(li < left.length) {
             mergedSortedArray[ki++] = left[li++];
         }
-
         while(ri < right.length) {
             mergedSortedArray[ki++] = right[ri++];
         }
-
         return mergedSortedArray;
     }
-    
+
+
+
+
 }
