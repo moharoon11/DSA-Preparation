@@ -2,7 +2,6 @@ package LinkedList.Concepts;
 
 public class CLL {
 
-
     private Node head;
     private Node tail;
 
@@ -10,8 +9,6 @@ public class CLL {
         this.head = null;
         this.tail = null;
     }
-
-
 
     private class Node {
 
@@ -26,6 +23,7 @@ public class CLL {
             this.value = value;
             this.next = next;
         }
+
     }
 
     public void insert(int value) {
@@ -78,8 +76,6 @@ public class CLL {
             }
             node  = node.next;
         } while(node != head);
-
-
 
     }
 
