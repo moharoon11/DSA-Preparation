@@ -28,12 +28,10 @@ public class CLL {
 
     public void insert(int value) {
         Node node = new Node(value);
-
         if (head == null) {
             head = node;
             tail = node;
         }
-
         node.next = head;
         tail.next = node;
         tail = node;
@@ -55,7 +53,6 @@ public class CLL {
     }
 
     public void delete(int value) {
-
         Node node = head;
 
         if(node == null) return;
@@ -65,9 +62,7 @@ public class CLL {
             tail.next = head;
             return;
         }
-
         do {
-
             Node n = node.next;
 
             if(n.value == value) {

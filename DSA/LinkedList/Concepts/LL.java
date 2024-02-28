@@ -78,6 +78,26 @@ public class LL {
        tail = node;
        size++;
     }
+
+
+
+    public void insertUsingRecursion(int val, int index) {
+        head = insertRecursion(val, index, head);
+    }
+
+    private Node insertRecursion(int val, int index, Node node) {
+
+        if(index == 0) {
+            Node temp = new Node(val, node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRecursion(val, index - 1, node.next);
+        return node;
+    }
+
+
     public void insert(int value, int index) {
 
         if(index == 0) {
@@ -169,15 +189,57 @@ public class LL {
     public Node find(int value) {
 
         Node node = head;
-
         while(node != null) {
             if(node.value == value) return node;
             node = node.next;
         }
-
         return null;
     }
 
+    public void duplicates() {
+
+        Node node = head;
+
+        while(node.next != null) {
+
+            if(node.value == node.next.value) {
+                node.next = node.next.next;
+                size--;
+            } else {
+                node = node.next;
+            }
+        }
+    }
+
+    public static LL merge(LL first, LL second) {
+        LL ans = new LL();
+
+        Node f = first.head;
+        Node s = second.head;
+
+
+        while(f != null && s != null) {
+            if(f.value < s.value) {
+                ans.insertLast(f.value);
+                f = f.next;
+            } else {
+                ans.insertLast(s.value);
+                s = s.next;
+            }
+        }
+
+        while(f != null) {
+            ans.insertLast(f.value);
+            f = f.next;
+        }
+
+        while(s != null) {
+            ans.insertLast(s.value);
+            s = s.next;
+        }
+
+        return ans;
+    }
 
 
 
@@ -193,5 +255,99 @@ public class LL {
     }
 
 
+    public static void main(String[] args) {
+
+        LL first = new LL();
+        first.insertLast(1);
+        first.insertLast(4);
+        first.insertLast(7);
+
+
+        LL second = new LL();
+        second.insertLast(0);
+        second.insertLast(3);
+        second.insertLast(9);
+        second.insertLast(9);
+
+
+        LL ans = LL.merge(first, second);
+
+        ans.display();
+
+
+
+
+    }
+
     
 }
+
+
+// Questions Leetcode
+// Has Cycle
+
+/*
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while(fast != null && fast.next != null) {
+
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
+ */
+
+/* Question
+Cycle length
+======================
+
+public class Solution {
+    public int hasCycle(ListNode head) {
+
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while(fast != null && fast.next != null) {
+
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow) {
+                int length  = 0;
+                do {
+                ListNode temp = slow;
+                temp = temp.next;
+                length++;
+                }
+                while(temp != fast);
+
+                return length;
+            }
+        }
+
+        return 0;
+    }
+    }
+
+ */
