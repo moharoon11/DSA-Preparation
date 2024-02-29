@@ -4,8 +4,8 @@ public class OrderAgnosticBinarySearch {
 
     public static void main(String[] args) {
 
-        int arr[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21};
-        int arrD[] = {900, 800, 700, 600, 550, 500, 450, 400, 350, 300, 250, 200, 150, 100};
+        int[] arr = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21};
+        int[] arrD = {900, 800, 700, 600, 550, 500, 450, 400, 350, 300, 250, 200, 150, 100};
         int target = 16;
         int targetD =100;
         int ans = binarySearch(arr, target);

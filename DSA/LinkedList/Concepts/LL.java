@@ -14,6 +14,8 @@ public class LL {
         this.size = 0;
     }
 
+
+
     private class Node {
 
         private int value;
@@ -46,6 +48,7 @@ public class LL {
     }
 
     public void insertLast(int value) {
+        // if tail is not provided this is how we add in the last
     //    Node temp = head;
 
 
@@ -77,6 +80,7 @@ public class LL {
     }
 
 
+
     public void insertUsingRecursion(int val, int index) {
         head = insertRecursion(val, index, head);
     }
@@ -93,6 +97,7 @@ public class LL {
         return node;
     }
 
+
     public void insert(int value, int index) {
 
         if(index == 0) {
@@ -106,6 +111,12 @@ public class LL {
         }
 
         Node temp = head;
+
+
+
+
+
+
 
         for(int i=1; i<index; i++) {
             temp = temp.next;
@@ -229,6 +240,8 @@ public class LL {
 
         return ans;
     }
+
+
 
     public void display() {
 
