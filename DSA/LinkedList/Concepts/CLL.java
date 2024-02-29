@@ -1,6 +1,6 @@
 package LinkedList.Concepts;
-
 public class CLL {
+
 
     private Node head;
     private Node tail;
@@ -38,11 +38,8 @@ public class CLL {
     }
 
     public void display() {
-
         Node node = head;
-
         if (head != null) {
-
             do {
                 System.out.print(node.value + " -> ");
                 node = node.next;
@@ -54,9 +51,7 @@ public class CLL {
 
     public void delete(int value) {
         Node node = head;
-
         if(node == null) return;
-
         if(node.value == value) {
             head = head.next;
             tail.next = head;
@@ -71,7 +66,6 @@ public class CLL {
             }
             node  = node.next;
         } while(node != head);
-
     }
 
 
