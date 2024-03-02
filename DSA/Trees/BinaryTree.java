@@ -2,22 +2,17 @@ package Trees;
 
 import java.util.Scanner;
 public class BinaryTree {
-
     private Node root;
-
     private static class Node {
-
-        private int value;
-        private Node left;
+        private final int value;
+        private  Node left;
         private Node right;
-
         Node(int value) {
             this.value = value;
         }
     }
 
     public void populate(Scanner scanner) {
-
         System.out.println("Enter the value of root node");
         int value = scanner.nextInt();
         root = new Node(value);
@@ -47,7 +42,6 @@ public class BinaryTree {
             node.right = right;
             populate(scanner, right);
         }
-
     }
 
 
@@ -57,7 +51,6 @@ public class BinaryTree {
 
     public void display(Node node, String intend) {
         if(node == null) return;
-
         System.out.println(intend + node.value);
         display(node.left, intend + "\t");
         display(node.right, intend + "\t");
@@ -69,5 +62,10 @@ public class BinaryTree {
         tree.populate(scanner);
         tree.display();
     }
+
+
+
+
+
 
 }
