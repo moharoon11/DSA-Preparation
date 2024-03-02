@@ -61,6 +61,28 @@ public class BinarySearchTree {
         return node;
     }
 
+    public boolean isBalanced(Node node) {
+
+        if(node == null) return true;
+
+        return Math.abs(height(node.left) - height(node.right)) <= 1 && isBalanced(node.left) && isBalanced(node.right);
+    }
+
+    public void populateSorted(int[] nums) {
+        populateSorted(nums, 0, nums.length);
+    }
+
+    public void populateSorted(int[] nums, int start, int end) {
+
+        if(start >= end) return;
+
+        int mid = start + (end - start) / 2;
+
+        insert(nums[mid]);
+        populateSorted(nums, start, mid);
+        populateSorted(nums, mid+1, end);
+    }
+
     public void display() {
         display(root, "The root node value is: ");
     }
@@ -72,17 +94,62 @@ public class BinarySearchTree {
         }
 
         System.out.println(details + node.value);
-        System.out.println("Height of this node " + node.value + " is: " + node.getHeight());
         display(node.left, "Left child of " + node.value + " is: ");
         display(node.right, "Right child of " + node.value + "is: ");
     }
+
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    public void preOrder(Node node) {
+        if(node == null) return;
+
+        System.out.println(node.value);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    public void inOrder(Node node) {
+        if(node == null) return;
+
+        inOrder(node.left);
+        System.out.println(node.value);
+        inOrder(node.right);
+    }
+
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    public void postOrder(Node node) {
+        if(node == null) return;
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.value);
+    }
+
+
+
 
     public static void main(String... args) {
         BinarySearchTree bst = new BinarySearchTree();
         int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
 
+
+
         bst.populate(nums);
-        bst.display();
+        bst.preOrder();
+
+//        int[] sortedNums = {1,2,3,4,5,6,7,8,9};
+//
+//        bst.populateSorted(sortedNums);
+//        bst.display();
 
     }
 }
