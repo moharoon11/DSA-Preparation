@@ -63,6 +63,35 @@ public class SegmentTree {
         }
     }
 
+    public int query(Node node, int qsi, int qei) {
+
+        if(node.startInterval >= qsi && node.endInterval <= qei) {
+            return node.data;
+        } else if(node.startInterval > qei || node.endInterval < qsi) {
+            return 0;
+        } else {
+            return query(node.left, qsi, qei) + query(node.right, qsi, qei);
+        }
+    }
+
+    public int update(Node node, int index, int value) {
+
+        if(index >= node.startInterval && index <= node.endInterval) {
+
+            if(index == node.startInterval && index == node.endInterval) {
+                node.data = value;
+                return node.data;
+            } else {
+                int leftAns = update(node.left, index, value);
+                int rightAns = update(node.right, index, value);
+                node.data = leftAns + rightAns;
+                return node.data;
+            }
+        }
+
+        return node.data;
+    }
+
 
 
 
