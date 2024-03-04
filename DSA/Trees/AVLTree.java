@@ -1,12 +1,11 @@
 package Trees;
 
-public class BinarySearchTree {
-
-// just revise the traversal nothing much
+// self balancing binary tree
+public class AVLTree {
 
     private Node root;
 
-    BinarySearchTree() {
+    AVLTree() {
 
     }
 
@@ -59,8 +58,65 @@ public class BinarySearchTree {
         }
 
         node.height = Math.max(height(node.left), height(node.right)) + 1;
+        return rotate(node);
+    }
+
+    public Node rotate(Node node) {
+
+        // left heavy
+        if(height(node.left) - height(node.right) > 0) {
+            // left left case - right rotate
+            if(height(node.left.left) - height(node.left.right) > 0) {
+                return rightRotate(node);
+            }
+            // left right case - left rotate right rotate
+            if(height(node.left.left) - height(node.left.right) < 0) {
+                node.left = leftRotate(node.left);
+                return rightRotate(node);
+            }
+
+        }
+
+        // right heavy
+        if(height(node.left) - height(node.right) < -1) {
+
+            // right right case - left rotate
+            if(height(node.right.left) - height(node.right.right) < 0) {
+                 return leftRotate(node);
+            }
+
+            // right left case - right and left rotate
+            if(height(node.right.left) - height(node.right.right) > 0) {
+               node.right = rightRotate(node.right);
+               return leftRotate(node);
+            }
+
+        }
+
         return node;
     }
+
+    public Node rightRotate(Node p) {
+        Node c = p.left;
+        Node t  =c.right;
+
+        c.right = p;
+        p.left = t;
+        return p;
+    }
+
+    public Node leftRotate(Node p) {
+        Node c = p.right;
+        Node t = c.left;
+
+        c.left = p;
+        p.right = t;
+
+        return p;
+    }
+
+
+
 
     public boolean isBalanced(Node node) {
 
@@ -133,24 +189,5 @@ public class BinarySearchTree {
         postOrder(node.left);
         postOrder(node.right);
         System.out.println(node.value);
-    }
-
-
-
-
-    public static void main(String... args) {
-        BinarySearchTree bst = new BinarySearchTree();
-        int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
-
-
-
-        bst.populate(nums);
-        bst.preOrder();
-
-//        int[] sortedNums = {1,2,3,4,5,6,7,8,9};
-//
-//        bst.populateSorted(sortedNums);
-//        bst.display();
-
     }
 }

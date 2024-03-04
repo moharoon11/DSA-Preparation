@@ -30,6 +30,8 @@ public class SegmentTree {
         root = construct(arr, 0, arr.length - 1);
     }
 
+
+    // revision is debugging the construct method
     public Node construct(int[] arr, int start, int end) {
 
         if(start == end) {
