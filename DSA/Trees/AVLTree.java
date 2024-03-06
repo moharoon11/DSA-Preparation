@@ -20,7 +20,7 @@ public class AVLTree {
             this.value = value;
         }
 
-        public int getValue() {return value;}
+      
         public int getHeight() {return height;}
     }
 
