@@ -66,7 +66,8 @@ public class BinarySearchTree {
 
         if(node == null) return true;
 
-        return Math.abs(height(node.left) - height(node.right)) <= 1 && isBalanced(node.left) && isBalanced(node.right);
+        return Math.abs(height(node.left) - height(node.right)) <= 1
+                && isBalanced(node.left) && isBalanced(node.right);
     }
 
     public void populateSorted(int[] nums) {
