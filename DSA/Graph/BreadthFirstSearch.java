@@ -17,7 +17,7 @@ public class BreadthFirstSearch {
 
         boolean[] visited = new boolean[v];
         for(int i=0; i<v; i++) {
-            if(visited[i] == false) {
+            if(!visited[i]) {
                 bfsDisconnectedGraph(graph, v, visited, i);
             }
         }
@@ -80,7 +80,7 @@ public class BreadthFirstSearch {
         while(!queue.isEmpty()) {
             int current = queue.remove();
 
-            if(visited[current] == false) {
+            if(!visited[current]) {
                 System.out.print(current + " -> ");
                 visited[current] =  true;
                 for(int i=0; i< graph[current].size(); i++) {

@@ -112,12 +112,6 @@ public class LL {
 
         Node temp = head;
 
-
-
-
-
-
-
         for(int i=1; i<index; i++) {
             temp = temp.next;
         }
@@ -241,8 +235,6 @@ public class LL {
         return ans;
     }
 
-
-
     public void display() {
 
         Node temp = head;
@@ -254,7 +246,6 @@ public class LL {
         System.out.println("END");
     }
 
-
     public static void main(String[] args) {
 
         LL first = new LL();
@@ -262,20 +253,13 @@ public class LL {
         first.insertLast(4);
         first.insertLast(7);
 
-
         LL second = new LL();
         second.insertLast(0);
         second.insertLast(3);
         second.insertLast(9);
         second.insertLast(9);
-
-
         LL ans = LL.merge(first, second);
-
         ans.display();
-
-
-
 
     }
 
