@@ -2,8 +2,6 @@ package Trees;
 
 public class BinarySearchTree {
 
-// just revise the traversal nothing much
-
     private Node root;
 
     BinarySearchTree() {
