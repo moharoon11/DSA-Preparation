@@ -55,7 +55,6 @@ public class ActivitySelection {
         }
 
         // now sort the Activities based on end times
-        // i guess the it must be a row here
         Arrays.sort(activities, Comparator.comparingDouble(it -> it[2]));
 
 
