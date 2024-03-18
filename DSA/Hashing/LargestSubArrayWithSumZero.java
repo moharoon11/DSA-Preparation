@@ -23,10 +23,9 @@ public class LargestSubArrayWithSumZero {
             } else {
                 map.put(sum, j);
             }
+
         }
-
         System.out.println("Largest Sub Array with sum as 0 => " + len);
-
     }
 
 }
