@@ -79,8 +79,6 @@ public class LL {
        size++;
     }
 
-
-
     public void insertUsingRecursion(int val, int index) {
         head = insertRecursion(val, index, head);
     }
@@ -137,9 +135,7 @@ public class LL {
     private Node get(int index) {
         Node temp = head;
 
-
         for(int i=0; i<index; i++) {
-
             temp = temp.next;
         }
 

@@ -64,13 +64,13 @@ public class AVLTree {
     public Node rotate(Node node) {
 
         // left heavy
-        if(height(node.left) - height(node.right) > 0) {
+        if(height(node.left) - height(node.right) > 1) {
             // left left case - right rotate
-            if(height(node.left.left) - height(node.left.right) > 0) {
+            if(height(node.left.left) - height(node.left.right) > 1) {
                 return rightRotate(node);
             }
             // left right case - left rotate right rotate
-            if(height(node.left.left) - height(node.left.right) < 0) {
+            if(height(node.left.left) - height(node.left.right) < -1) {
                 node.left = leftRotate(node.left);
                 return rightRotate(node);
             }
@@ -81,12 +81,12 @@ public class AVLTree {
         if(height(node.left) - height(node.right) < -1) {
 
             // right right case - left rotate
-            if(height(node.right.left) - height(node.right.right) < 0) {
+            if(height(node.right.left) - height(node.right.right) < -1) {
                  return leftRotate(node);
             }
 
             // right left case - right and left rotate
-            if(height(node.right.left) - height(node.right.right) > 0) {
+            if(height(node.right.left) - height(node.right.right) > 1) {
                node.right = rightRotate(node.right);
                return leftRotate(node);
             }
