@@ -88,7 +88,7 @@ public class Maze {
         }
 
         if(col < maze[0].length - 1) {
-            pathRestriction(p + "R", maze,row, col + 1);
+            pathRestriction(p + "R", maze, row, col + 1);
         }
 
     }

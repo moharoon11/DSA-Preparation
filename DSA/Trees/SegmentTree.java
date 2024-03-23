@@ -91,8 +91,8 @@ public class SegmentTree {
             }
         }
 
-        // index does not exist
-        return -1;
+
+        return node.data;
     }
 
 

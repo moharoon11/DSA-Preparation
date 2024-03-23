@@ -2,18 +2,19 @@ package LinkedList.Concepts;
 
 public class DLL {
 
+    public static void main(String... args) {
+
+    }
+
     private Node head;
-
-
 
     public void insertFirst(int value) {
 
         Node node = new Node(value);
         node.next = head;
         node.prev = null;
-        if(head != null) {
+        if(head != null)
             head.prev = node;
-        }
         head = node;
 
     }
@@ -52,7 +53,6 @@ public class DLL {
     }
     public void insert(int after, int value) {
 
-
         Node p = find(after);
 
         if(p == null) {
@@ -68,9 +68,7 @@ public class DLL {
             node.next.prev = node;
         }
 
-
     }
-
 
     public void display() {
         Node temp = head;
