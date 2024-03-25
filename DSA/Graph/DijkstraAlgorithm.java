@@ -10,7 +10,6 @@ public class DijkstraAlgorithm {
     public static void main(String... args) {
         int V = 6;
         List<Edge>[] graph = new ArrayList[V];
-
         createGraph(graph);
         dijksta(graph, V, 0);
     }
@@ -19,7 +18,6 @@ public class DijkstraAlgorithm {
 
         private int src;
         private int dest;
-
         private int wt;
 
         Edge(int src, int dest, int wt) {
@@ -27,14 +25,13 @@ public class DijkstraAlgorithm {
             this.dest = dest;
             this.wt = wt;
         }
+
     }
     private static void createGraph(List<Edge>[] graph) {
 
         for(int i=0; i<graph.length; i++) {
             graph[i] = new ArrayList<Edge>();
         }
-
-
 
         graph[0].add(new Edge(0, 1,2));
         graph[0].add(new Edge(0, 2, 4));
@@ -100,9 +97,8 @@ public class DijkstraAlgorithm {
 
                 }
             }
-
-
         }
+
         for(int i=0; i<dist.length; i++) {
             System.out.print(dist[i] + " -> ");
         }
