@@ -1,88 +1,167 @@
-Here's a revised roadmap with easy questions accounting for 30% of the total:
-
 Arrays
-Easy: 9 questions
+===============================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+===============================
 
+
+===============================
 Strings
-Easy: 9 questions
+===============================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+===============================
 
+
+
+===============================
 Recursion
+===============================
 Easy: 5 questions
 Medium: 14 questions
 Hard: 2 questions
+===============================
 
+
+================================
 Matrix
+================================
 Easy: 5 questions
 Medium: 14 questions
 Hard: 2 questions
+================================
 
+
+
+=================================
 Linked Lists
-Easy: 7 questions
+=================================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+==================================
 
+
+===================================
 Stacks, Queues
+===================================
 Easy: 5 questions
 Medium: 14 questions
 Hard: 2 questions
+===================================
 
+
+
+====================================
 Trees, Binary Tree
-Easy: 7 questions
+====================================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+======================================
 
+
+
+======================================
 Binary Search Tree
+======================================
 Easy: 5 questions
 Medium: 14 questions
 Hard: 2 questions
+========================================
 
+
+=======================================
 Segment Tree, AVL Trees
+=======================================
 Easy: 3 questions
 Medium: 7 questions
 Hard: 1 question
+=========================================
 
+
+
+========================================
 Graph
-Easy: 7 questions
+========================================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+========================================
 
+
+========================================
 BFS, DFS
+=======================================
 Easy: 5 questions
 Medium: 14 questions
 Hard: 2 questions
+=========================================
 
+
+==========================================
 Topological Sorting
+===========================================
 Easy: 3 questions
 Medium: 7 questions
 Hard: 1 question
+===========================================
 
+
+
+==============================================
 HashMap, HashTable, HashSet
-Easy: 7 questions
+==============================================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+============================================
 
+
+
+===========================================
 Backtracking, Greedy, Divide and Conquer
-Easy: 7 questions
+============================================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+============================================
 
+
+===============================================
 Searching, Sorting
-Easy: 7 questions
+==============================================
+Easy: 5 questions
 Medium: 21 questions
 Hard: 3 questions
+===============================================
 
+
+==================================================
 Two Pointer, Sliding Window
+===================================================
 Easy: 3 questions
 Medium: 7 questions
 Hard: 1 question
+====================================================
 
-Total: 300 questions
-Easy: 90 questions (30%)
-Medium: 210 questions (70%)
-Hard: 30 questions (10%)
 
-This distribution should provide a good balance between building a strong foundation and tackling more challenging problems. Adjust as needed based on your progress and comfort level.
+Easy: 70 questions (5 questions * 14 topics)
+Medium: 196 questions
+Hard: 34 questions
+
+
+
+
+The percentage breakdown for the 300 questions would be:
+
+Easy: (70 / 300) * 100 ≈ 23.33%
+Medium: (196 / 300) * 100 ≈ 65.33%
+Hard: (34 / 300) * 100 ≈ 11.33%
+So, approximately:
+
+23.33% easy questions
+65.33% medium questions
+11.33% hard questions
