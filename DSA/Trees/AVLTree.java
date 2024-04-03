@@ -1,7 +1,12 @@
 package Trees;
 
+import java.math.*;
 // self balancing binary tree
 public class AVLTree {
+
+    public static void main(String[] args) {
+
+    }
 
     private Node root;
 

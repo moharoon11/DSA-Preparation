@@ -102,7 +102,7 @@ public class BreadthFirstSearch {
         while (!queue.isEmpty()) {
             int current = queue.remove();
 
-            if (visited[current] == false) {
+            if (!visited[current]) {
                 System.out.print(current + " -> ");
                 visited[current] = true;
                 for (int i = 0; i < graph[current].size(); i++) {
