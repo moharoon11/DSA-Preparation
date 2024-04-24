@@ -17,7 +17,7 @@ public class Maze {
                 {true, true, true}
         };
 
-     pathRestriction("", maze, 0, 0);
+        pathRestriction("", maze, 0, 0);
     }
 
     private static int count(int row, int col) {

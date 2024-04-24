@@ -8,10 +8,13 @@ import java.util.Queue;
 public class DijkstraAlgorithm {
 
     public static void main(String... args) {
-        int V = 6;
-        List<Edge>[] graph = new ArrayList[V];
-        createGraph(graph);
-        dijksta(graph, V, 0);
+//        int V = 6;
+//        List<Edge>[] graph = new ArrayList[V];
+//        createGraph(graph);
+//        dijksta(graph, V, 0);
+
+        StringBuilder sb = new StringBuilder("aA");
+
     }
 
     private static class Edge {

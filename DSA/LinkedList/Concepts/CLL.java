@@ -1,7 +1,5 @@
 package LinkedList.Concepts;
 public class CLL {
-
-
     private Node head;
     private Node tail;
 

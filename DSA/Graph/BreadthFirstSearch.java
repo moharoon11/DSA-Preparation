@@ -10,18 +10,14 @@ public class BreadthFirstSearch {
         int v = 7;
         ArrayList<Edge>[] graph = new ArrayList[v];
         createGraph(graph);
-
         bfs(graph, v);
-
         System.out.println();
-
         boolean[] visited = new boolean[v];
         for(int i=0; i<v; i++) {
             if(!visited[i]) {
                 bfsDisconnectedGraph(graph, v, visited, i);
             }
         }
-
     }
 
     private static class Edge {
