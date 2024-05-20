@@ -12,22 +12,23 @@ public class CountAnagramOccurrence {
 
     }
 
-    public static int countOccurrenceOfAnagram(String s, String p) {
+    public static int countOccurrenceOfAnagram(String s, String pattern) {
         int ans = 0;
         Map<Character, Integer> map = new HashMap<Character, Integer>();
 
-        for(char c:p.toCharArray())
+        for(char c:pattern.toCharArray())
             map.put(c, map.getOrDefault(c, 0) + 1);
 
 
-        int k = p.length();
-        int i = 0;
-        int j = 0;
+        int window_size = pattern.length();
+        int window_start = 0;
+        int window_end = 0;
+
         int count = map.size();
 
-        while(j < s.length()) {
+        while(window_end < s.length()) {
 
-            char ch = s.charAt(j);
+            char ch = s.charAt(window_end);
 
             if(map.containsKey(ch)) {
                 map.put(ch, map.get(ch) - 1);
@@ -36,20 +37,20 @@ public class CountAnagramOccurrence {
                 }
             }
 
-            if(j - i + 1 < k) {
-                j++;
-            } else if(j - i + 1 == k) {
+            if(window_end - window_start + 1 < window_size) {
+                window_end++;
+            } else if(window_end - window_start + 1 == window_size) {
 
                 if(count == 0) ans++;
 
-                char charAtWindowStart = s.charAt(i);
+                char charAtWindowStart = s.charAt(window_start);
 
                 if(map.containsKey(charAtWindowStart)) {
                      map.put(charAtWindowStart, map.get(charAtWindowStart) + 1);
                      if(map.get(charAtWindowStart) == 1) count++;
                 }
-                i++;
-                j++;
+                window_start++;
+                window_end++;
             }
 
         }
