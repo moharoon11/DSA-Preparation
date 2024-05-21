@@ -1,4 +1,4 @@
-package sliding_window;
+package sliding_window.fixed_window;
 
 public class MaximumSumOfSubarraySizeK {
 

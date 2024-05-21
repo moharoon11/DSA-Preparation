@@ -1,4 +1,4 @@
-package sliding_window;
+package sliding_window.fixed_window;
 
 import java.util.ArrayList;
 import java.util.Comparator;
