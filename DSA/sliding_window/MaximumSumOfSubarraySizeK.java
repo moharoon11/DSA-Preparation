@@ -2,6 +2,7 @@ package sliding_window;
 
 public class MaximumSumOfSubarraySizeK {
 
+    // [1,2,3,4,5,6,7];
     public static int slidingWindow(int[] arr, int n) {
         int max = Integer.MIN_VALUE;
         int i=0;
