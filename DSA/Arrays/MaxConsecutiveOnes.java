@@ -8,7 +8,7 @@ public class MaxConsecutiveOnes {
         System.out.println(findMaxCount(arr));
     }
 
-    // brute force approach
+
     public static int findMaxCount(int[] arr) {
 
         int max = Integer.MIN_VALUE;
