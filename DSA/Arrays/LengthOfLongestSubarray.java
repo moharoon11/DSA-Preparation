@@ -3,6 +3,8 @@ package Arrays;
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 /*
+
+// this is a sliding window question and this approach will not be applicable if negative integer comes
 Example 1:
 Input Format: N = 3, k = 5, array[] = {2,3,5}
 Result: 2
