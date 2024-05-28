@@ -10,6 +10,8 @@ public class LongestSubstringWithKUniqueChars {
         System.out.println(findLongSub("aabaacbebebe", 3));
     }
 
+
+
     public static int findLongSub(String s, int k) {
         int max = 0;
         int i=0, j=0;

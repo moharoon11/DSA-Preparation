@@ -1,5 +1,19 @@
 package sliding_window.fixed_window;
 
+/**
+ *
+ * Two Sum
+ * Roman to Integer
+ * Palindrome Number
+ * Maximum Subarray
+ * Remove Element
+ * Contains Duplicate
+ * Add Two Numbers
+ * Majority Element
+ * Remove Duplicates from Sorted Array
+ * Valid Anagram
+ * Group Anagrams
+ */
 public class MaximumSumOfSubarraySizeK {
 
     // [1,2,3,4,5,6,7];

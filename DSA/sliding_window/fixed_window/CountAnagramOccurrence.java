@@ -43,6 +43,8 @@ public class CountAnagramOccurrence {
 
                 if(count == 0) ans++;
 
+
+
                 char charAtWindowStart = s.charAt(window_start);
 
                 if(map.containsKey(charAtWindowStart)) {

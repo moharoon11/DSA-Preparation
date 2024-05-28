@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.HashMap;
+
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 /*
@@ -26,12 +28,18 @@ class LengthOfLongestSubarray {
         int[] arr1 = {2,3,5,1,9};
         int N1 = 5;
         int K1 = 10;
-        System.out.println(find(arr, N, K));
-        System.out.println(find(arr1, N1, K1));
+
+        int[] arr2 = {2,0,0,3};
+        int N2 = 4;
+        int K2 = 3;
+        System.out.println(find(arr2, N2, K2));
+        System.out.println(findWithHashing(arr2, N2, K2));
 
 
     }
 
+
+    // this is an optimal approach only for positive integers
     public static int find(int[] arr, int N, int K) {
         int max = 0;
 
@@ -55,6 +63,39 @@ class LengthOfLongestSubarray {
 
             j++;
         }
+
+        return max;
+    }
+
+
+    // this is an better approach for positive integers, but for zeros and negative and positive integer array
+    // this is an optimal approach
+    public static int findWithHashing(int[] arr, int N, int K) {
+        int max = 0;
+
+        HashMap<Integer, Integer> prefixSumMap = new HashMap<Integer, Integer>();
+
+
+        int sum = 0;
+
+        for(int i=0; i < N; i++) {
+            sum += arr[i];
+
+            if(sum == K) {
+                max = Math.max(max, i + 1);
+            }
+
+            int part = sum - K;
+
+            if(prefixSumMap.containsKey(part)) {
+                max = Math.max(max, i - prefixSumMap.get(part));
+            }
+
+            if(!prefixSumMap.containsKey(sum)) {
+                prefixSumMap.put(sum, i);
+            }
+        }
+
 
         return max;
     }
