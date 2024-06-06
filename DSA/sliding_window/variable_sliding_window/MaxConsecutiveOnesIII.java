@@ -44,10 +44,5 @@ public class MaxConsecutiveOnesIII {
 
 
 
-    // Sliding Window Approach
-    public int longestOnesSlidingWindow() {
-        int max = 0;
 
-        return max;
-    }
 }
