@@ -16,6 +16,7 @@ import java.util.Arrays;
  * For the lower bound the condition was arr[ind] >= x and here,
  * in the case of the upper bound, it is arr[ind] > x.
  */
+
 public class LowerBound {
 
     public static void main(String[] args) {
