@@ -3,7 +3,8 @@ package Searching.BinarySearch.Easy.coding;
 public class FloorAndCeil {
 
     public static void main(String[] args) {
-        int n = 6, arr[] ={3, 4, 4, 7, 8, 10}, x= 5;
+        int x = 5;
+        int arr[] ={3, 4, 4, 7, 8, 10};
         getResulr(arr, x);
     }
 
@@ -18,24 +19,35 @@ public class FloorAndCeil {
         while(start <= end) {
             int mid = start + (end - start) / 2;
 
-            if(!ceil  && Math.ceil((double) x) == arr[mid]) {
-                System.out.println(arr[mid]);
-                ceil =  true;
-                end  = mid - 1;
-            } else if(!ceil && Math.ceil((double) x) > arr[mid]) {
-                end  = mid - 1;
-            } else if(!ceil && Math.ceil((double) x) < arr[mid]){
-                start = mid + 1;
+            while(!floor && start <= end) {
+
+                if(x - 1 == arr[mid]) {
+                    floor = true;
+                    System.out.println(arr[mid]);
+                }  else if(x - 1 > arr[mid]) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
+
+                if(start == arr.length - 1) break;
             }
 
-            if(!floor && Math.floor((double) x) ==  arr[mid]) {
-                System.out.println(arr[mid]);
-                floor = true;
-                start  = mid + 1;
-            }  else if(!floor && Math.floor((double) x) < arr[mid]) {
-                end  = mid - 1;
-            } else if(!floor && Math.floor((double) x) > arr[mid]){
-                start = mid + 1;
+
+
+            while(!ceil && start <= end) {
+                if(x + 1 == arr[mid]) {
+                    ceil = true;
+                    System.out.println(arr[mid]);
+                } else if(x + 1 > arr[mid]) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+
+                if(end == 0) {
+                    break;
+                }
             }
 
         }
