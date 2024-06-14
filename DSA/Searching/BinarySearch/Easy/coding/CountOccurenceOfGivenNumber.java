@@ -3,23 +3,20 @@ package Searching.BinarySearch.Easy.coding;
 public class CountOccurenceOfGivenNumber {
 
     public static void main(String[] args) {
-
-        int n = 7, x = 3;
-        int[] arr = {2, 2 , 3 , 3 , 3 , 3 , 4};
-
+        int x = 3;
+        int[] arr = {2, 2,3,3,3,3,3,3,3,3,3,3 , 4};
+        int n = arr.length;
         System.out.println(bs(arr, n, x));
-
     }
 
     public static int bs(int[] arr, int n, int x) {
-        int count  = -1;
-        int first = firstOccurence(arr, n, x);
-        if(first == -1) return 0;
-        int last = lastOccurence(arr, n, x);
+        int first = firstOccurrence(arr, n, x);
+        if(first == -1) return -1;
+        int last = lastOccurrence(arr, n, x);
         return (last - first) + 1;
     }
 
-    public static int firstOccurence(int[] arr, int n, int x) {
+    public static int firstOccurrence(int[] arr, int n, int x) {
 
         int start = 0;
         int end = n - 1;
@@ -40,7 +37,7 @@ public class CountOccurenceOfGivenNumber {
         return first;
     }
 
-    public static int lastOccurence(int[] arr, int n, int x) {
+    public static int lastOccurrence(int[] arr, int n, int x) {
 
         int start = 0;
         int end = n - 1;
