@@ -1,20 +1,22 @@
 package Strings;
 
 public class RemoveOutermostParanthesis {
-
+// https://www.linkedin.com/in/shyam2911/ - later connect and ask about it
     public static void main(String[] args) {
 
         System.out.println(remove("(()())()"));
         System.out.println(remove("(()(()))"));
         System.out.println(remove("()()"));
         System.out.println(remove(""));
-    }
+
+           }
 
 
     public String removeOuterParentheses(String S) {
         StringBuilder result = new StringBuilder();
         int opened = 0;
 
+        
         for (char c : S.toCharArray()) {
             if (c == '(' && opened++ > 0) result.append(c);
             if (c == ')' && opened-- > 1) result.append(c);
