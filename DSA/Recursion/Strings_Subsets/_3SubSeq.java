@@ -30,6 +30,8 @@ public class _3SubSeq {
         return left;
     }
 
+
+
     public static void printSubSequenceAscii(String str, String ans) {
 
         if(str.isEmpty()) {
@@ -42,10 +44,27 @@ public class _3SubSeq {
         printSubSequenceAscii(str.substring(1), ans + (str.charAt(0) + 0));
     }
 
+    public static ArrayList<String> printSubSequenceAsciiStore(String str, String ans) {
+
+        if(str.isEmpty()) {
+            ArrayList<String> list = new ArrayList<String>();
+            list.add(ans);
+            return list;
+        }
+
+        ArrayList<String> first = printSubSequenceAsciiStore(str.substring(1), ans + str.charAt(0));
+        ArrayList<String> second =  printSubSequenceAsciiStore(str.substring(1), ans);
+        ArrayList<String> third =    printSubSequenceAsciiStore(str.substring(1), ans + (str.charAt(0) + 0));
+
+       first.addAll(second);
+       first.addAll(third);
+       return first;
+    }
+
     public static void main(String[] args) {
         //printSubSequence("abc", "");
      //   System.out.println(getSubSequence("abc", ""));
-        printSubSequenceAscii("abc", "");
+        System.out.println(printSubSequenceAsciiStore("abc", ""));
     }
 
 }
